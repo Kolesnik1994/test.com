@@ -1,6 +1,7 @@
 package test.com.service;
 
-import org.springframework.stereotype.Service;
+import org.springframework.security.core.userdetails.UserDetailsService;
+
 
 import test.com.model.User;
 import test.com.web.dto.UserRegistrationDto;
@@ -11,8 +12,8 @@ import test.com.web.dto.UserRegistrationDto;
  * @author VLadislav K
  * 
  */
-@Service
-public interface UserService {
+
+public interface UserService extends UserDetailsService {
 	
 	User save (UserRegistrationDto registrationDto);
 

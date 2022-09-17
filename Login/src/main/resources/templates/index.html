@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec ="http://www.thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8">
+<title>Registration and login application</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" 
+crossorigin="anonymous">
+
+</head>
+<body>
+
+                                       <!---- NAVBAR (header) ---->
+   <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"> CourseSystem v.1.0</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#"> Our Courses </a>
+        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" href="#"> About</a>
+          <a class="nav-link" href="#" th:href="@{/logout}"> You Want Exit</a>
+        <a class="nav-link disabled"> since 2022</a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+<br>
+<br>
+
+        <div class ="container">   
+              <h1>   Registration and Login	with Spring Boot, Spring Security, Thymeleaf, Hibernate and MySQL    </h1>
+               
+               Welcome <span sec:authentication = "principal.username"> User </span>
+        	
+        </div>
+</body>
+</html>
