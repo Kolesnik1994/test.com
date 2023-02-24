@@ -12,17 +12,22 @@ crossorigin="anonymous">
                                                  <!---- NAVBAR (header) ---->
    <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"> CourseSystem v.1.0</a>
+
+    <a class="navbar-brand" href="#"> LoginForm v.1.0</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#"> Our Courses </a>
+        <a class="nav-link active" aria-current="page" th:href="@{/login}"> Login </a>
         <a class="nav-link" href="#">Contact</a>
         <a class="nav-link" href="#"> About</a>
-        <a class="nav-link disabled">     since 2022</a>
+          <a class="nav-link" href="#" th:href="@{/logout}"> Exit</a>
+        <a class="nav-link disabled"> ________________________________________________________________________________________________________________________________</a>
+        
       </div>
+      
+   
     </div>
   </div>
 </nav>
@@ -64,9 +69,9 @@ crossorigin="anonymous">
                   
                   <div class = "form-group"> 
                   <label class = "control-label" for ="password"> Password </label>
-                  <input id = "password" class="form-control" th:field = "*{password}" required autofocus = "autofocus" />                
+                  <input type="password" id = "password" class="form-control" th:field = "*{password}" required autofocus = "autofocus" />                
                   </div>
-                  
+                  <br>
                   <div class = "form-group"> 
                   <button type ="submit" class = "btn btn-success"> Register </button> 
                   <span> Already register? <a href	="/" th:href = "@{/login}"> Login here </a> </span>              

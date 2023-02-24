@@ -5,6 +5,10 @@ import org.springframework.stereotype.Repository;
 
 import test.com.model.User;
 
+/**
+ * User Repository
+ * @author Vladislav K
+ */
 @Repository
 public interface UserRepository extends JpaRepository <User, Long> {
 	

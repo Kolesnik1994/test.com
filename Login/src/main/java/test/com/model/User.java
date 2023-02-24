@@ -1,6 +1,7 @@
 package test.com.model;
 
 import java.util.Collection;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -18,7 +19,6 @@ import javax.persistence.UniqueConstraint;
 
 /**
  *  Simple JavaBean domain object that represents User
- *  
  *  @author VLadislav K
  */
 
@@ -44,8 +44,7 @@ public class User {
 	                                  inverseJoinColumns=@JoinColumn(name="role_id",referencedColumnName="id"))
 	private Collection <Role> roles;
 	
-	public User() {
-		
+	public User() {	
 	}
 
 	public User(String firstName, String lastName, String email, String password, Collection<Role> roles) {
@@ -54,6 +53,7 @@ public class User {
 		this.email = email;
 		this.password = password;
 		this.roles = roles;
+		
 	}
 
 	public Long getId() {
@@ -103,4 +103,6 @@ public class User {
 	public void setRoles(Collection<Role> roles) {
 		this.roles = roles;
 	}
+	
+	
 }

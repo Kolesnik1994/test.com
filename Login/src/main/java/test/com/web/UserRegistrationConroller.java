@@ -11,8 +11,7 @@ import test.com.service.UserService;
 import test.com.web.dto.UserRegistrationDto;
 
 /**
- * Controller for {@link test.com.model.User}'s pages.
- * 
+ * Controller class for registration form
  * @author VLadislav K
  */
 @Controller

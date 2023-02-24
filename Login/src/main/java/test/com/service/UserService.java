@@ -7,14 +7,14 @@ import test.com.model.User;
 import test.com.web.dto.UserRegistrationDto;
 
 /*
- * Service class for {@link test.com.model.User}
- * 
- * @author VLadislav K
- * 
+ * Interface used for store data 
+ * @author VLadislav K 
  */
 
 public interface UserService extends UserDetailsService {
 	
 	User save (UserRegistrationDto registrationDto);
+	
+	
 
 }

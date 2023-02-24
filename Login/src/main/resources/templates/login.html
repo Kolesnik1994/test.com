@@ -12,17 +12,22 @@ crossorigin="anonymous">
        <!---- NAVBAR (header) ---->
    <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"> CourseSystem v.1.0</a>
+
+    <a class="navbar-brand" href="#"> LoginForm v.1.0</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#"> Our Courses </a>
+        <a class="nav-link active" aria-current="page" href="#"> Login </a>
         <a class="nav-link" href="#">Contact</a>
         <a class="nav-link" href="#"> About</a>
-        <a class="nav-link disabled">     since 2022</a>
+          <a class="nav-link" href="#" th:href="@{/logout}"> Exit</a>
+        <a class="nav-link disabled"> ________________________________________________________________________________________________________________________________</a>
+        
       </div>
+      
+   
     </div>
   </div>
 </nav>
@@ -40,7 +45,7 @@ crossorigin="anonymous">
 	   
 	      
 	      
-	      <div th:if = "${param.erorr}">
+	      <div th:if = "${param.error}">
 	        <div class = "alert alert-danger"> Invalid user name or password 
 	        </div> 
 	      </div>
@@ -52,15 +57,14 @@ crossorigin="anonymous">
 	        </div> 
 	      </div>
 	      
-	      <div class = "form-group"> 
-	      <label for = "username"> User name : </label>
-	      <input type="text" class = "form-controll" id = "username" name ="username"
+	      <div class = "mb-3"> 
+	      <label class="form-label" for = "username"> User name : </label>
+	      <input class="form-control" type="text" id = "username" name ="username"
 	      placeholder =" Enter email Id" autofocus = "autofocus"/> 
 	      </div>
-	      <br>
-	       <div class = "form-group"> 
-	      <label for = "password"> Password : </label>
-	      <input type="password" class = "form-controll" id = "password" name ="password"
+	       <div class = "mb-3"> 
+	      <label class="form-label" for = "password"> Password : </label>
+	      <input class="form-control" type="password" id = "password" name ="password"
 	      placeholder ="Enter Password" autofocus = "autofocus"/> 
 	      </div>	
 	      <br>

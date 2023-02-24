@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * Main Controller class
- * 
  * @author VLadislav K
  */
 @Controller
@@ -16,6 +15,7 @@ public class MainController {
 	public String login() {
 		return "login";
 	}
+	
 	
 	@GetMapping ("/")
 	public String home () {
