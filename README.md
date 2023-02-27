@@ -1,2 +1,4 @@
 # test.com
-Spring boot app, Spring JPA, Spring Security, Login + Registration form
+Login + Registration Form, Spring Data JPA, Spring Security, MySQL, Junit + SpringSecurityTest.
+
+Video link on youtube -> https://youtu.be/H7-8xNsLK3M
